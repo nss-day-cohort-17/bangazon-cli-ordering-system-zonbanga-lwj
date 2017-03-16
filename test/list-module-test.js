@@ -1,13 +1,13 @@
 'use strict'
 
 const {assert} = require('chai')
+const {listProductPopularity, listProducts} = require('../lib/listModule.js')
 
-const listProductPopularity = function() {
+describe(`List Module`, function() {
+	describe(`listProductPopularity`, function() {
 
-}
+	})
+	describe(`listProducts`, function() {
 
-const listProducts = function() {
-
-}
-
-module.exports = {listProductPopularity, listProducts}
+	})
+})
