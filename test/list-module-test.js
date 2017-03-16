@@ -1,7 +1,7 @@
 'use strict'
 
 const {assert} = require('chai')
-const {listProductPopularity, listProducts} = require('../lib/listModule.js')
+const {listProductPopularity, listProducts, listMenu} = require('../lib/listModule.js')
 
 describe(`List Module`, function() {
 	describe(`listProductPopularity`, function() {
@@ -10,4 +10,8 @@ describe(`List Module`, function() {
 	describe(`listProducts`, function() {
 
 	})
+
+  describe(`listMenu`, function() {
+
+  })
 })
