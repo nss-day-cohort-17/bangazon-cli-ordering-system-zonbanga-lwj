@@ -2,7 +2,7 @@
 
 const {assert} = require('chai')
 
-describe(`paymentModule`, function() {
+describe(`Payment Module`, function() {
 	const {createPaymentOption} = require('../lib/paymentModule')
 	it(`should return 'success'`, function() {
 		assert.equal(createPaymentOption(), 'success')
