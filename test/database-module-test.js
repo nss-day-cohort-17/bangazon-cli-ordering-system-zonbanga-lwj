@@ -4,7 +4,8 @@ const {assert} = require('chai')
 const {
 	addCustomer,
 	addPaymentOption,
-	getPaymentOptions
+	getPaymentOptions,
+	getCustomerInfo
 	} = require('../lib/databaseModule')
 
 describe(`Database Module`, function() {
@@ -26,6 +27,13 @@ describe(`Database Module`, function() {
 			return getPaymentOptions(21).then(data => {
 				assert.isArray(data)
 			})
+		})
+	})
+	describe(`getCustomerInfo`, function() {
+		it(`should return an array`, function() {
+			return getCustomerInfo().then(data => {
+				assert.isArray(data)
+		});
 		})
 	})
 })
