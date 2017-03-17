@@ -37,6 +37,8 @@ describe(`Database Module`, function() {
 			.then( productsList => {
 				assert.isArray(productsList)
 			})
+		})
+	})
 	describe(`getCustomerInfo`, function() {
 		it(`should return an array`, function() {
 			return getCustomerInfo().then(data => {
