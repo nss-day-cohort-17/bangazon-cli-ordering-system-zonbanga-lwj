@@ -5,7 +5,8 @@ const {
 	addCustomer,
 	addPaymentOption,
 	getPaymentOptions,
-	getProductList
+	getProductList,
+	getCustomerInfo
 	} = require('../lib/databaseModule')
 
 describe(`Database Module`, function() {
@@ -30,13 +31,17 @@ describe(`Database Module`, function() {
 			})
 		})
 	})
-
 	describe('getProductList', function() {
 		it(`should return an array`, function(){
 			return getProductList(10)
 			.then( productsList => {
 				assert.isArray(productsList)
 			})
+	describe(`getCustomerInfo`, function() {
+		it(`should return an array`, function() {
+			return getCustomerInfo().then(data => {
+				assert.isArray(data)
+		});
 		})
 	})
 })
