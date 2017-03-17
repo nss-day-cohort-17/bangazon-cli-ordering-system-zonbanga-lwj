@@ -26,6 +26,12 @@ describe(`Database Module`, function() {
 		it(`should be a function`, function() {
 			assert.isFunction(addOrder)
 		})
+		it(`should return an array`, function() {
+			return addOrder(22).then(order => assert.isArray(order))
+		})
+		it(`should return an array of length 1`, function() {
+			return addOrder(22).then(order => assert.equal(order.length, 1))
+		})
 	})
 	describe(`getOrder`, function() {
 		it(`should be a function`, function() {
