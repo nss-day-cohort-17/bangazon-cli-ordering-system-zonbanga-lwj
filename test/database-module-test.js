@@ -4,9 +4,11 @@ const {assert} = require('chai')
 const {
 	addCustomer,
 	addPaymentOption,
+	addOrder,
 	getPaymentOptions,
 	getProductList,
-	getCustomerInfo
+	getCustomerInfo,
+	getOrder
 	} = require('../lib/databaseModule')
 
 describe(`Database Module`, function() {
@@ -18,6 +20,25 @@ describe(`Database Module`, function() {
 	describe(`addPaymentOption`, function() {
 		it(`should be a function`, function() {
 			assert.isFunction(addPaymentOption)
+		})
+	})
+	describe(`addOrder`, function() {
+		it(`should be a function`, function() {
+			assert.isFunction(addOrder)
+		})
+		it(`should return an array`, function() {
+			return addOrder(22).then(order => assert.isArray(order))
+		})
+		it(`should return an array of length 1`, function() {
+			return addOrder(22).then(order => assert.equal(order.length, 1))
+		})
+	})
+	describe(`getOrder`, function() {
+		it(`should be a function`, function() {
+			assert.isFunction(getOrder)
+		})
+		it(`should return an array`, function() {
+			return getOrder(18).then(data => assert.isArray(data))
 		})
 	})
 	describe(`getPaymentOptions`, function() {
