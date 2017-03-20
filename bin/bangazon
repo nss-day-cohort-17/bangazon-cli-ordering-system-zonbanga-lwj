@@ -2,4 +2,6 @@
 
 'use strict';
 
-require('../lib/cli');
+const start = require('../lib/cli');
+
+start();
