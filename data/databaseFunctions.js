@@ -96,9 +96,9 @@ function dropTables() {
 }
 
 // reseed
-// db.run(`DELETE FROM products`)
-// db.run(`DROP TABLE products`)
-createProducts()
+wipeData()
+dropTables()
+createAll()
 
 // Export functions
 module.exports = {createCustomers, createPaymentOptions, createProducts, createOrders, createOrderLineItems, createAll, wipeData, dropTables}
