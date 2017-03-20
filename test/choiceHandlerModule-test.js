@@ -1,7 +1,7 @@
 'use strict'
 
-const { assert: { isFunction, isNumber } } = require('chai')
-const { choiceHandler } = require('../lib/choiceHandlerModule')
+const { assert: { isFunction, isObject, property } } = require('chai')
+const choiceHandler = require('../lib/choiceHandlerModule')
 
 describe('choiceHandlerModule.js', () => {
 
@@ -10,8 +10,11 @@ describe('choiceHandlerModule.js', () => {
       isFunction(choiceHandler)
     })
 
-    it('should return a function', () => {
-      isNumber(choiceHandler('1'))
+    it('should return an object', () => {
+      isObject(choiceHandler('1'))
     })
+    it("should have property 'first'", () => {
+       property(choiceHandler(1), "first")
+     });
   })
 })
