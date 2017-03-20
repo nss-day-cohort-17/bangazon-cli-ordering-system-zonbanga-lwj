@@ -95,6 +95,10 @@ function dropTables() {
 	db.run(`DROP TABLE order_line_items`)
 }
 
+// reseed
+wipeData()
+dropTables()
+createAll()
 
 // Export functions
 module.exports = {createCustomers, createPaymentOptions, createProducts, createOrders, createOrderLineItems, createAll, wipeData, dropTables}

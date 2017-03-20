@@ -1,7 +1,9 @@
 'use strict'
 
 const {assert} = require('chai')
-const {listProductPopularity, listProducts, listMenu} = require('../lib/listModule.js')
+const { listProducts } = require('../lib/listProducts.js')
+const { listProductPopularity } = require('../lib/popularity');
+const { listMenu } = require('../lib/listMenu');
 
 describe(`List Module`, function() {
 	describe(`listProductPopularity`, function() {

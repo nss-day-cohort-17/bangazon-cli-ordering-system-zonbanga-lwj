@@ -1,3 +1,7 @@
 #!/usr/bin/env node
 
-'use strict'
+'use strict';
+
+const start = require('../lib/cli');
+
+start();
