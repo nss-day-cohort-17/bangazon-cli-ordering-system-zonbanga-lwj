@@ -53,6 +53,9 @@ describe(`Database Module`, function() {
 		})
 	})
 	describe('getProductList', function() {
+		it(`should be a function`, function(){
+				assert.isFunction(getProductList)
+			})
 		it(`should return an array`, function(){
 			return getProductList(10)
 			.then( productsList => {
@@ -61,6 +64,9 @@ describe(`Database Module`, function() {
 		})
 	})
 	describe(`getCustomerInfo`, function() {
+		it(`should be a function`, function(){
+				assert.isFunction(getCustomerInfo)
+			})
 		it(`should return an array`, function() {
 			return getCustomerInfo().then(data => {
 				assert.isArray(data)

@@ -16,5 +16,8 @@ describe('choiceHandlerModule.js', () => {
     it("should have property 'first'", () => {
        property(choiceHandler(1), "first")
      });
+     it("should have property 'second'", () => {
+        property(choiceHandler(1), "second")
+      });
   })
 })
